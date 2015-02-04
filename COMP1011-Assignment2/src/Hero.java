@@ -5,7 +5,7 @@
  * that they missed.
  * 
  * @author Blaine Parr
- * @version January 28, 2015
+ * @version February 3, 2015
  */
 public class Hero 
 {
@@ -47,7 +47,6 @@ public class Hero
 	{
 		//local variables
 		int randomNumber = (int)(Math.random() * 100 + 1);
-		System.out.println(randomNumber);
 		
 		//if the number is between 1 and 20 return true, else return false
 		if(randomNumber >= 1 && randomNumber <= 20)

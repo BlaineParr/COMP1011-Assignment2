@@ -35,6 +35,8 @@ public class SuperHero extends Hero
 	private void generateRandomPowers()
 	{
 		//create ArrayList powers as a String ArrayList with a size of 0
+		/*this will be used for the purpose of holding all of the powers and removing ones that
+		  have been selected*/
 		ArrayList<String> powers = new ArrayList<String>(0);
 		
 		//add the different powers to the ArrayList
@@ -60,13 +62,14 @@ public class SuperHero extends Hero
 	 */
 	public void showPowers()
 	{
-		//print out a message showing what SuperHero the powers are coming from
+		/*print out a message showing the SuperHeros's name and announcing their powers are about
+		  to follow*/
 		System.out.println(this.name + "'s powers are: ");
 		
-		//loop through all of the SuperHero's powers, printing out each
+		//loop through all of the SuperHero's powers, printing out each one
 		for(int i = 0; i < superPowers.length; i++)
 		{
-			System.out.print(superPowers[i] + ", ");
+			System.out.println(superPowers[i]);
 		} //for ends
 	} //method showPowers ends
 } //class SuperHero ends
