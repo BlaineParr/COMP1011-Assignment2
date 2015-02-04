@@ -15,16 +15,23 @@ public class SuperHero extends Hero
 	
 	/**
 	 * This constructor generates super heroes with names provide from the user. It also
-	 * initializes the superPowers array to a size of 3
+	 * initializes the superPowers array to a size of 3 and generates random powers for the
+	 * SuperHero.
 	 * @param name The name of the super hero
 	 */
 	public SuperHero(String name)
 	{
 		super(name);
 		this.superPowers = new String[3];
+		this.generateRandomPowers();
 	} //constructor ends
 	
 	//Private Methods/////////////////////////////////////////////////////////////////////////////
+	/**
+	 * This method selects 3 random powers from an ArrayList and adds them to the superPowers
+	 * array. After a power is selected, it is removed from the ArrayList to prevent it from
+	 * being selected again.
+	 */
 	private void generateRandomPowers()
 	{
 		//create ArrayList powers as a String ArrayList with a size of 0
@@ -40,10 +47,26 @@ public class SuperHero extends Hero
 			int powerNumber = (int)(Math.random() * powers.size());
 			
 			//set the array slot to the selected power
-			superPowers[i] = powers.get(powerNumber);
+			this.superPowers[i] = powers.get(powerNumber);
 			
 			//remove the selected power from the ArrayList
 			powers.remove(powerNumber);
 		} //for ends
 	} //method generateRandomPowers ends
+	
+	//Public Methods//////////////////////////////////////////////////////////////////////////////
+	/**
+	 * This method prints out each of the SuperHero's super powers.
+	 */
+	public void showPowers()
+	{
+		//print out a message showing what SuperHero the powers are coming from
+		System.out.println(this.name + "'s powers are: ");
+		
+		//loop through all of the SuperHero's powers, printing out each
+		for(int i = 0; i < superPowers.length; i++)
+		{
+			System.out.print(superPowers[i] + ", ");
+		} //for ends
+	} //method showPowers ends
 } //class SuperHero ends
