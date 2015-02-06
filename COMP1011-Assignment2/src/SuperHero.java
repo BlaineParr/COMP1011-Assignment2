@@ -69,7 +69,7 @@ public class SuperHero extends Hero
 		//loop through all of the SuperHero's powers, printing out each one
 		for(int i = 0; i < superPowers.length; i++)
 		{
-			System.out.println(superPowers[i]);
+			System.out.println(this.superPowers[i]);
 		} //for ends
 	} //method showPowers ends
 } //class SuperHero ends

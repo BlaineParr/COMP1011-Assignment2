@@ -20,6 +20,9 @@
  * -Fixed the console output of the SuperHero class.
  * -Stopped the randomly generated number that was printed out in the Hero class's hitAttempt 
  * method for debugging purposes from being printed out.
+ * 
+ * v1.1:
+ * -Added a this identifier to the showPowers method
  */
 public class Game 
 {
